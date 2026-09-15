@@ -329,29 +329,58 @@ button { font-family: inherit; }
 /* ==========================================================================
    Products
    ========================================================================== */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
+.product-tabs { margin-top: 40px; }
+.tab-list {
+  display: flex;
+  gap: 4px;
+  border-bottom: 2px solid rgba(11, 46, 91, 0.1);
+  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
-.product-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  text-align: center;
-  box-shadow: var(--shadow-card);
-  transition: transform .15s ease;
+.tab-btn {
+  padding: 12px 22px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
 }
-.product-card:hover { transform: translateY(-4px); }
-.product-icon {
-  width: 48px;
-  height: 60px;
-  margin: 0 auto 16px;
-  color: var(--color-royal-blue);
+.tab-btn:hover { color: var(--color-navy); }
+.tab-btn.active { color: var(--color-royal-blue); border-bottom-color: var(--color-royal-blue); }
+
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid rgba(11, 46, 91, 0.12);
+  border-radius: var(--radius-md);
 }
-.product-card h3 { color: var(--color-navy); font-size: 1.05rem; margin: 0 0 6px; }
-.product-cat { margin: 0; color: var(--color-text-muted); font-size: 0.88rem; }
+.product-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+.product-table thead th {
+  background: var(--color-navy);
+  color: var(--color-white);
+  text-align: left;
+  padding: 11px 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.th-en { display: block; font-size: 0.72rem; font-weight: 400; opacity: 0.75; }
+.product-table td {
+  padding: 9px 14px;
+  border-bottom: 1px solid rgba(11, 46, 91, 0.08);
+  color: var(--color-text);
+}
+.product-table tbody tr:nth-child(even) { background: rgba(240, 240, 240, 0.5); }
+.product-table tbody tr:hover { background: rgba(14, 80, 192, 0.07); }
 
 /* ==========================================================================
    Organization
@@ -475,8 +504,6 @@ button { font-family: inherit; }
 @media (max-width: 1023px) {
   .services-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
-  .products-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact-layout { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 767px) {
@@ -512,8 +539,9 @@ button { font-family: inherit; }
 
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .products-grid { grid-template-columns: 1fr; }
 
-  .form-row-split { flex-direction: column; }
+  .tab-btn { padding: 10px 14px; font-size: 0.88rem; }
+  .product-table { font-size: 0.8rem; }
+
   .footer-offices { grid-template-columns: 1fr; }
 }

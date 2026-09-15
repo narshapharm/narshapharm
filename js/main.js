@@ -22,4 +22,20 @@
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
+
+  var tabButtons = document.querySelectorAll('.tab-btn');
+  tabButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.getAttribute('data-tab');
+      tabButtons.forEach(function (b) {
+        var isActive = b === btn;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-selected', String(isActive));
+        b.tabIndex = isActive ? 0 : -1;
+      });
+      document.querySelectorAll('.tab-panel').forEach(function (panel) {
+        panel.hidden = panel.id !== 'tab-panel-' + target;
+      });
+    });
+  });
 })();
