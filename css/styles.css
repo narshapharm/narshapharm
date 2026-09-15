@@ -136,9 +136,7 @@ button { font-family: inherit; }
    Hero
    ========================================================================== */
 .hero {
-  background:
-    linear-gradient(160deg, rgba(7, 28, 56, 0.88) 0%, rgba(11, 46, 91, 0.82) 45%, rgba(16, 60, 116, 0.88) 100%),
-    url("../public/images/Warehouse.png");
+  background: url("../public/images/Warehouse.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -152,11 +150,13 @@ button { font-family: inherit; }
   font-weight: 700;
   line-height: 1.25;
   margin: 0 0 24px;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55), 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 .hero-title span { display: block; }
 .hero-subtitle {
   font-size: clamp(1.05rem, 2vw, 1.35rem);
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
   margin: 0 0 40px;
   font-weight: 500;
 }
@@ -354,61 +354,80 @@ button { font-family: inherit; }
 .product-cat { margin: 0; color: var(--color-text-muted); font-size: 0.88rem; }
 
 /* ==========================================================================
-   Contact
+   Organization
    ========================================================================== */
-.contact-layout {
+.org-chart {
+  margin-top: 56px;
+  text-align: center;
+}
+.org-ceo {
+  display: inline-block;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 16px 56px;
+  border-radius: 10px;
+}
+.org-teams-row {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 40px;
-  margin-top: 40px;
-  align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 32px;
 }
-.contact-card {
-  background: var(--color-light-gray);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  margin-bottom: 24px;
+.org-teams-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: rgba(11, 46, 91, 0.2);
 }
-.contact-card h3 { color: var(--color-navy); margin: 0 0 16px; font-size: 1.05rem; }
-.contact-list li {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
+.org-team-col { position: relative; }
+.org-team-col::before {
+  content: '';
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  width: 2px;
+  height: 32px;
+  background: rgba(11, 46, 91, 0.2);
+  transform: translateX(-50%);
 }
-.contact-label { color: var(--color-text-muted); min-width: 52px; font-weight: 600; }
-.address-block { margin: 0; font-size: 0.92rem; }
-.address-ko { color: var(--color-text-muted); font-size: 0.85rem; }
-
-.contact-form {
+.org-team-head {
+  background: var(--color-royal-blue);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 16px 12px;
+  margin-bottom: 12px;
+}
+.org-team-en { display: block; font-size: 0.78rem; font-weight: 500; opacity: 0.85; margin-top: 2px; }
+.org-team-items { display: flex; flex-direction: column; gap: 10px; }
+.org-item {
   background: var(--color-white);
-  border: 1px solid rgba(11,46,91,0.1);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  box-shadow: var(--shadow-card);
-}
-.contact-form h3 { color: var(--color-navy); margin: 0 0 20px; }
-.form-row { margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px; }
-.form-row-split { flex-direction: row; gap: 16px; }
-.form-row-split > div { flex: 1; display: flex; flex-direction: column; gap: 6px; }
-.form-row label { font-size: 0.88rem; font-weight: 600; color: var(--color-text); }
-.form-row input,
-.form-row select,
-.form-row textarea {
-  font-family: inherit;
-  font-size: 0.95rem;
-  padding: 11px 14px;
-  border: 1px solid rgba(11,46,91,0.2);
+  border: 1px solid rgba(11, 46, 91, 0.18);
   border-radius: 8px;
-  background: var(--color-white);
+  padding: 12px 10px;
+  font-size: 0.88rem;
+  font-weight: 500;
   color: var(--color-text);
 }
-.form-row input:focus,
-.form-row select:focus,
-.form-row textarea:focus {
-  border-color: var(--color-royal-blue);
+.org-item-en { display: block; font-size: 0.76rem; color: var(--color-text-muted); font-weight: 400; margin-top: 2px; }
+
+@media (max-width: 1023px) {
+  .org-teams-row { grid-template-columns: repeat(2, 1fr); row-gap: 48px; }
+  .org-teams-row::before { display: none; }
+  .org-team-col::before { display: none; }
 }
-.form-note { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 14px; }
+@media (max-width: 767px) {
+  .org-teams-row { grid-template-columns: 1fr; }
+}
 
 /* ==========================================================================
    Footer
