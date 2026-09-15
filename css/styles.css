@@ -137,8 +137,11 @@ button { font-family: inherit; }
    ========================================================================== */
 .hero {
   background:
-    radial-gradient(circle at 85% 15%, rgba(1, 114, 252, 0.35), transparent 55%),
-    linear-gradient(160deg, #071C38 0%, #0B2E5B 45%, #103C74 100%);
+    linear-gradient(160deg, rgba(7, 28, 56, 0.88) 0%, rgba(11, 46, 91, 0.82) 45%, rgba(16, 60, 116, 0.88) 100%),
+    url("../public/images/Warehouse.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--color-white);
   padding: 120px 24px 100px;
   text-align: center;
