@@ -18,6 +18,12 @@ Per `requirements.md` §7: a single `index.html` with a small number of accompan
 
 No local dev server tooling (Node/Python) is available in this environment — to preview changes, spin up a throwaway static file server (e.g. a small PowerShell `HttpListener` script) rather than assuming `npx serve` or `python -m http.server` will work.
 
+## Deployment
+
+The site is deployed to both GitHub Pages (`master` branch, root) and Vercel (auto-deploys on push to `master` via the GitHub integration, project `narshapharm/narshapharm` → `narshapharm.vercel.app`).
+
+`vercel.json` pins `outputDirectory` to `.` — **do not remove this**. The repo has a `public/` directory that holds real company assets (warehouse photo, org chart, logos, unrelated docs) rather than a build output; Vercel's zero-config "Other" framework detection otherwise assumes a `public/` folder *is* the site root and serves 404s for everything since `index.html` lives at the repo root, not inside `public/`.
+
 ## Page structure (one-page scroll site)
 
 Fixed header (logo + nav) → shared HERO → three anchored chapters → footer:
