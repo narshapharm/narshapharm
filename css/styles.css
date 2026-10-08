@@ -153,13 +153,6 @@ button { font-family: inherit; }
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55), 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 .hero-title span { display: block; }
-.hero-subtitle {
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
-  color: rgba(255,255,255,0.9);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
-  margin: 0 0 40px;
-  font-weight: 500;
-}
 .hero-cta {
   display: flex;
   gap: 16px;
