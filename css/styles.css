@@ -229,44 +229,8 @@ button { font-family: inherit; }
 .section-tbd { margin-top: 32px; }
 
 /* ==========================================================================
-   About — services / why / stats
+   About — why / stats
    ========================================================================== */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 72px;
-}
-.service-card {
-  background: var(--color-white);
-  border: 1px solid rgba(11,46,91,0.08);
-  border-radius: var(--radius-lg);
-  padding: 32px 28px;
-  box-shadow: var(--shadow-card);
-}
-.icon-badge {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: rgba(14, 80, 192, 0.1);
-  color: var(--color-royal-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.icon-badge svg { width: 28px; height: 28px; }
-.service-card h3 {
-  color: var(--color-navy);
-  font-size: 1.1rem;
-  margin: 0 0 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.ko-sub { font-size: 0.85rem; font-weight: 500; color: var(--color-text-muted); }
-.service-card p { margin: 0; color: var(--color-text-muted); font-size: 0.95rem; }
-
 .subsection { margin-top: 72px; }
 .subsection-title {
   color: var(--color-navy);
@@ -518,7 +482,6 @@ button { font-family: inherit; }
    Responsive breakpoints (desktop ≥1024 / tablet 768–1023 / mobile <768)
    ========================================================================== */
 @media (max-width: 1023px) {
-  .services-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
 }

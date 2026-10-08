@@ -27,7 +27,7 @@ The site is deployed to both GitHub Pages (`master` branch, root) and Vercel (au
 ## Page structure (one-page scroll site)
 
 Fixed header (logo + nav) → shared HERO → three anchored chapters → footer:
-- `#about` — About Us: company intro, 3 core services, "Why Narsha Pharm?" (4 strengths), "By The Numbers" (4 stats)
+- `#about` — About Us: company intro, "Why Narsha Pharm?" (4 strengths), "By The Numbers" (4 stats). An earlier "3 core services" card grid (API Sourcing / Regulatory Affairs / Warehouse Management) was removed per user request.
 - `#products` — Product List: the original 6-card `.products-grid` (bottle-icon cards: Nizatidine, L-Carnitine, Ascorbic acid, Upadacitinib, Vonoprazan Fumarate, Bempedoic acid) stays as a curated highlight row, followed below by a 3-tab full data table (`.tab-btn`/`.tab-panel`, switching handled in `js/main.js`) — **DMF List** (65 registered APIs), **Excipient** (12 items), **New Pipeline** (7 upcoming APIs). Table content was transcribed from `public/images/list 1.png`–`list 6.png` (real registration filings: DMF List ← list 1–4, Excipient ← list 5, New Pipeline ← list 6) and simplified slightly — the source spreadsheet's yellow row highlighting and a redundant "repeat country name in English in the remarks column" pattern were dropped as spreadsheet artifacts, not meaningful data. DMF List defaults active on load. When the source images gain new rows, re-read them and append rather than re-deriving the whole table from memory.
 - `#organization` — Organization: org chart (CEO → 영업팀/Sales, 원료개발/Sourcing, RA, 원료관리실/Warehouse), sourced from `public/images/oragnization.png` and rebuilt as styled HTML/CSS rather than an embedded screenshot, to stay consistent with the rest of the site and remain responsive. This replaced an earlier Contact section (contact form + info) — direct contact info (Tel/Fax/address) now lives only in the footer (`id="footer"`, linked from the hero's "Become a Partner" CTA).
 
@@ -58,4 +58,4 @@ Typography: **Pretendard** for all body/UI text (fallback `'Noto Sans KR', 'Appl
 
 ## Responsive & accessibility requirements (§7)
 
-Three breakpoints: desktop ≥1024px, tablet 768–1023px, mobile <768px. Grid reflow: services 3→1 col, "Why" 4→2×2, products 6→3×2→1-2 col, stats 4→2×2. Hero images skip `loading="lazy"`; other images lazy-load. Body text contrast ≥4.5:1. Use semantic tags (`header`, `main`, `section`, `footer`) and `lang="ko"`.
+Three breakpoints: desktop ≥1024px, tablet 768–1023px, mobile <768px. Grid reflow: "Why" 4→2×2, products 6→3×2→1-2 col, stats 4→2×2. Hero images skip `loading="lazy"`; other images lazy-load. Body text contrast ≥4.5:1. Use semantic tags (`header`, `main`, `section`, `footer`) and `lang="ko"`.
