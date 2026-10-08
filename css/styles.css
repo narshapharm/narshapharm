@@ -85,7 +85,7 @@ button { font-family: inherit; }
   justify-content: space-between;
 }
 .logo-link { display: flex; align-items: center; }
-.logo-img { height: 42px; width: auto; }
+.logo-img { height: 63px; width: auto; }
 
 .main-nav ul {
   display: flex;
@@ -411,7 +411,7 @@ button { font-family: inherit; }
 }
 
 @media (max-width: 767px) {
-  :root { --header-height: 64px; }
+  :root { --header-height: 72px; }
   .main-nav {
     position: fixed;
     top: var(--header-height);
