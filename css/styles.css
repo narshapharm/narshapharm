@@ -212,9 +212,8 @@ button { font-family: inherit; }
   font-size: 1.1rem;
   color: var(--color-text);
   max-width: 720px;
-  margin: 0 0 8px;
+  margin: 0 0 24px;
 }
-.lead-en { color: var(--color-text-muted); font-size: 0.98rem; margin-bottom: 24px; }
 .body-text { max-width: 760px; color: var(--color-text); margin: 0 0 56px; }
 
 .tbd-tag {
