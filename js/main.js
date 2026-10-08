@@ -18,6 +18,14 @@
     });
   }
 
+  var logoLink = document.querySelector('.logo-link');
+  if (logoLink) {
+    logoLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   var yearEl = document.getElementById('footer-year');
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
