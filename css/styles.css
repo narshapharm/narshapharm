@@ -193,7 +193,7 @@ button { font-family: inherit; }
    Sections (shared)
    ========================================================================== */
 .section { padding: 96px 0; }
-.section-products { background: var(--color-light-gray); }
+.section-products { background: var(--color-light-gray); padding-top: 48px; }
 .eyebrow {
   color: var(--color-royal-blue);
   font-weight: 700;
@@ -442,6 +442,7 @@ button { font-family: inherit; }
 
   .hero { padding: 88px 20px 72px; }
   .section { padding: 64px 0; }
+  .section-products { padding-top: 32px; }
 
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
