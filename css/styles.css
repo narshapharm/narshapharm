@@ -214,6 +214,7 @@ button { font-family: inherit; }
   max-width: 720px;
   margin: 0 0 24px;
 }
+.lead-center { margin-left: auto; margin-right: auto; text-align: center; }
 .body-text { max-width: 1000px; color: var(--color-text); font-size: 1.1rem; margin: 0 0 56px; }
 
 .tbd-tag {
@@ -309,7 +310,7 @@ button { font-family: inherit; }
 .product-card h3 { color: var(--color-navy); font-size: 1.05rem; margin: 0 0 6px; }
 .product-cat { margin: 0; color: var(--color-text-muted); font-size: 0.88rem; }
 
-.product-tabs { margin-top: 56px; }
+.product-tabs { margin-top: 0; }
 .tab-list {
   display: flex;
   gap: 4px;
