@@ -19,7 +19,7 @@
   }
 
   var logoLink = document.querySelector('.logo-link');
-  if (logoLink) {
+  if (logoLink && logoLink.getAttribute('href').charAt(0) === '#') {
     logoLink.addEventListener('click', function (e) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });

@@ -108,7 +108,8 @@ button { font-family: inherit; }
   transition: transform .2s ease;
 }
 .main-nav a:hover::after,
-.main-nav a:focus-visible::after { transform: scaleX(1); }
+.main-nav a:focus-visible::after,
+.main-nav a[aria-current="page"]::after { transform: scaleX(1); }
 
 .nav-toggle {
   display: none;
